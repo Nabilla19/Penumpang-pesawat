@@ -20,13 +20,13 @@ class Flight {
     public void addPassenger(String name) {
         Passenger newPassenger = new Passenger(name);
         if (head == null) {
-            head = newPassenger;  // Jika daftar kosong, jadikan penumpang pertama
+            head = newPassenger;  
         } else {
             Passenger temp = head;
             while (temp.next != null) {
-                temp = temp.next;  // Menelusuri sampai penumpang terakhir
+                temp = temp.next;  
             }
-            temp.next = newPassenger;  // Menambahkan penumpang baru di akhir daftar
+            temp.next = newPassenger;  
         }
     }
     public void removePassenger(String name) {
@@ -36,7 +36,7 @@ class Flight {
         }
 
         if (head.name.equals(name)) {
-            head = head.next;  // Jika penumpang yang dihapus adalah yang pertama
+            head = head.next;  
             System.out.println("Passenger " + name + " removed.");
             return;
         }
@@ -54,7 +54,7 @@ class Flight {
             return;
         }
 
-        prev.next = current.next;  // Memutuskan hubungan dengan penumpang yang dihapus
+        prev.next = current.next;  
         System.out.println("Passenger " + name + " removed.");
     }
 
@@ -67,7 +67,7 @@ class Flight {
         Passenger temp = head;
         while (temp != null) {
             System.out.print(temp.name + " -> ");
-            temp = temp.next;  // Menelusuri setiap penumpang
+            temp = temp.next; 
         }
         System.out.println("End");
     }
